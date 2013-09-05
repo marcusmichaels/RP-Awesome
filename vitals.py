@@ -7,20 +7,24 @@ def xp():
     return experience
 
 # Health sets depending on XP (hopefully)
-def hp(i):
+def hp():
     health = 0
 
-    if i == 0:
+    if xp() == 0:
         health += 10
+    elif xp() <= 200:
+        health += 500
+    else:
+        health += 1000
        
     return health
 
 # Attack
-def atk(xp):
+def atk():
     pass
 
 # Damage
-def dmg(xp):
+def dmg():
     pass
 
 # Dice throw (two dice)
@@ -28,12 +32,7 @@ def throw():
     d1 = random.randrange(1,7)
     d2 = random.randrange(1,7)
    
-    print d1 # Printing d1 and d2 for debugging
-    print d2
- 
     total = d1 + d2
     return total
     
-print throw()
-print xp()
-print hp(xp)
+print "\nYou have %s health and have thrown a %s, your experience is currently at %s\n" % (hp(), throw(), xp())
