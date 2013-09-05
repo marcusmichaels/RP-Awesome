@@ -1,19 +1,26 @@
 import random
 
-# Health
-def hp():
-    pass
+# Experience (thought this would be cool to allow hp and atk level unlocks as well as determine the dmg that's taken)
+def xp():
+    experience = 0
+
+    return experience
+
+# Health sets depending on XP (hopefully)
+def hp(i):
+    health = 0
+
+    if i == 0:
+        health += 10
+       
+    return health
 
 # Attack
-def atk():
+def atk(xp):
     pass
 
 # Damage
-def dmg():
-    pass
-
-# Experience (thought this would be cool to allow level unlocks)
-def xp():
+def dmg(xp):
     pass
 
 # Dice throw (two dice)
@@ -28,3 +35,5 @@ def throw():
     return total
     
 print throw()
+print xp()
+print hp(xp)
