@@ -36,3 +36,16 @@ def throw():
     return total
     
 print "\nYou have %s health and have thrown a %s, your experience is currently at %s\n" % (hp(), throw(), xp())
+
+def game_on():
+    alive = True
+    while alive == True:
+        break
+
+def play_game(x):
+    x = x.lower()
+    print x
+    if x == 'yes' or x == 'y' or x == 'ye' or x == 'yea' or x == 'yeah':
+        pass
+
+play_game(raw_input("Want to play a game?"))
